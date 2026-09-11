@@ -17,7 +17,7 @@ pub(crate) const TIMESERIES: &str = "timeseries";
 pub(crate) const VIEW: &str = "view";
 pub(crate) static DISALLOWED_DB_NAMES: LazyLock<HashSet<&'static str>> = LazyLock::new(|| {
     let mut set = HashSet::new();
-    set.insert("_mdb_internal_sqlinterface");
+    set.insert("__mdb_internal_sqlinterface");
     set.insert("admin");
     set.insert("config");
     set.insert("local");
@@ -29,7 +29,7 @@ pub(crate) static DISALLOWED_COLLECTION_NAMES: LazyLock<HashSet<&'static str>> =
     LazyLock::new(|| {
         let mut set = HashSet::new();
         set.insert("__sql_schemas");
-        set.insert("_sql_status");
+        set.insert("__sql_status");
         set.insert("");
         set
     });
